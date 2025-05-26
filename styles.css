@@ -41,3 +41,23 @@ nav {
     transition: all 0.3s ease;
     position: relative;
 }
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.terminal {
+    background-color: black;
+    height: 600px;
+    width: 70%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
