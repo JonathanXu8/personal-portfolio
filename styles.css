@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F2F2F2;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -9,7 +15,6 @@
 header {
     padding: 0.5rem 0;
     backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.8);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -44,15 +49,30 @@ nav {
 
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 50px;
+}
+
+
+.top-terminal {
+    background-color: #B6B09F;
+    width: 70%;
+    height: 20px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px 10px 0 0 ;
 }
 
 .terminal {
-    background-color: black;
+    background-color: #EAE4D5;
+    color: green;
     height: 600px;
     width: 70%;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
 }
 
 .about {
