@@ -4,6 +4,10 @@ body {
   background-color: #F2F2F2;
 }
 
+p {
+    margin: 0 0 10px 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -13,7 +17,7 @@ body {
 }
 
 header {
-    padding: 0.5rem 0;
+    padding: 0.5vh 0;
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -28,7 +32,7 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 3vh;
     font-weight: 700;
     background-clip: text;
 }
@@ -52,27 +56,30 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 5vh;
 }
 
 
 .top-terminal {
     background-color: #B6B09F;
     width: 70%;
-    height: 20px;
+    height: 2.5vh;
     border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px 10px 0 0 ;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    border-radius: 10px 10px 0 0;
+
+    text-align: center;
+    font-size: 2vh;
 }
 
 .terminal {
     background-color: #EAE4D5;
     color: green;
-    height: 600px;
+    height: 75vh;
     width: 70%;
     border-radius: 0 0 10px 10px;
-    padding: 20px;
+    padding: 3vh;
 }
 
 .about {
@@ -80,4 +87,73 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
+}
+
+.about-header {
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.about-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.about-left, .about-right {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.about-left {
+    padding: 0 30px 0 70px;
+}
+
+.about-right {
+    padding: 0 70px 0 30px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projects-header {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.contact-header {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.contact-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.contact-card {
+    flex: 1;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 0 70px 0 70px;
 }
