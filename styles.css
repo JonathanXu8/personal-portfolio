@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -71,6 +73,10 @@ nav {
     padding: 5vh;
 }
 
+#home {
+    scroll-margin-top: 100px;
+}
+
 
 .top-terminal {
     background-color: #B6B09F;
@@ -94,43 +100,78 @@ nav {
     padding: 3vh;
 }
 
+.highlight {
+    color: yellow;
+}
+
+.input-line {
+    display: flex;
+    flex-direction: row;
+}
+
 .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-}
-
-.about-header {
-    font-size: 50px;
-    font-weight: bold;
-    padding-bottom: 20px;
+    /*padding-top: 50px;*/
 }
 
 .about-body {
     display: flex;
     flex-direction: row;
-    width: 100%;
-}
-
-.about-left, .about-right {
-    flex: 1;
-    box-sizing: border-box;
+    /*margin-top: 20px;*/
+    gap: 2rem;
 }
 
 .about-left {
-    padding: 0 30px 0 70px;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .about-right {
-    padding: 0 70px 0 30px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+.about-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 .project-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    padding-top: 20px;
 }
 
 .project-image {
@@ -153,6 +194,10 @@ nav {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
+.project-card:hover {
+    cursor: pointer;
+}
+
 .project-content {
     padding: 2rem;
 }
@@ -160,6 +205,22 @@ nav {
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.more {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 125px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
 }
 
 .contact {
@@ -170,6 +231,7 @@ nav {
     backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 75px;
 }
 
 .contact-body {
