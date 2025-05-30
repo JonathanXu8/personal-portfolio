@@ -7,8 +7,7 @@
 
     <title>Jonathan's Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -30,30 +29,57 @@
         <div class="hero">
             <div class="top-terminal">zsh-jonathan's bash portfolio</div>
             <div class="terminal">
-                asdf
+                <div class="output-line">
+                    <pre style="font-family: monospace; font-size: 8px;">
+██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗ 
+██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
+██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
+██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
+██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
+╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝
+                    </pre>
+                    <p>
+                        Welcome to my interactive terminal portfolio!<br>
+                        Type <span class="highlight">'help'</span> to see available commands.<br>
+                        Type <span class="highlight">'clear'</span> to clear the screen
+                    </p>
+                </div>
+                <div class="input-line">
+                    <span class="input-prompt">visitor@portfolio:~$</span>
+                    <div class="input-container">
+                        <input type="text" id="command-input" autocomplete="off" spellcheck="false">
+                        <span class="cursor" id="cursor"></span>
+                    </div>
+                </div>
             </div>
         </div>
 
         <section id="about" class="section">
-            <div class="about">
-                <h2>About Me</h2>
-                <div class="about-body">
-                    <div class="about-left">
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                    </div>
-                    <div class="about-right">
-                        <div class="about-card">
-
+            <div class="container">
+                <div class="about">
+                    <h2>About Me</h2>
+                    <div class="about-body">
+                        <div class="about-left">
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
                         </div>
-                        <div class="about-card">
-                            
-                        </div>
-                        <div class="about-card">
-                            
-                        </div>
-                        <div class="about-card">
-                            
+                        <div class="about-right">
+                            <div class="about-card">
+                                <h4>Languages</h4>
+                                <p>Python, Java, C, OCaml, JavaScript, HTML, CSS</p>
+                            </div>
+                            <div class="about-card">
+                                <h4>Technologies</h4>
+                                <p>Git, Github, Docker</p>
+                            </div>
+                            <div class="about-card">
+                                <h4>Education</h4>
+                                <p>BS in Computer Science with a Minor in General Business</p>
+                            </div>
+                            <div class="about-card">
+                                <h4>Hobbies</h4>
+                                <p>Music, rock climbing, and building cool projects.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,30 +89,31 @@
         <section id="projects" class="section">
             <div class="container">
                 <h2> Featured Projects</h2>
-                <div class="project-body">
+                <div class="project-body" onclick="window.location.href='https://github.com/JonathanXu8';">
                     <div class="project-card">
-                        <div class="project-image">asdf</div>
+                        <div class="project-image">img</div>
                         <div class="project-content">
-                            <h3>Project 1</h3>
-                            <p>desc 1</p>
+                            <h3>Custom Machine Learning Library</h3>
+                            <p>A machine learning library written from scratch in python</p>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image">asdf</div>
+                    <div class="project-card" onclick="window.location.href='https://github.com/JonathanXu8';">
+                        <div class="project-image">img</div>
                         <div class="project-content">
-                            <h3>Project 1</h3>
-                            <p>desc 1</p>
+                            <h3>Java Compiler</h3>
+                            <p>Selfmade Java compiler written in C</p>
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-image">asdf</div>
+                    <div class="project-card" onclick="window.location.href='https://github.com/JonathanXu8';">
+                        <div class="project-image">img</div>
                         <div class="project-content">
-                            <h3>Project 1</h3>
-                            <p>desc 1</p>
+                            <h3>Keep It Up!</h3>
+                            <p>A interactive game that uses the webcam and computer vision as user interaction</p>
                         </div>
                     </div>
                 </div>
-            </div>
+                <button class="more" onclick="window.location.href='https://github.com/JonathanXu8';">View More</button>
+        </div>
         </section>
 
         <section id="contact" class="section">
@@ -95,7 +122,7 @@
                     <h2>Contact Me!</h2>
                     <div class="contact-body">
                         <div class="contact-card">
-                            <h3>Email 📧</h3>
+                            <h3>Email</h3>
                             <a href="mailto:jonathanxu.cs@mgmail.com">
                                 jonathanxu.cs@gmail.com
                             </a>
