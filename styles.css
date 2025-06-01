@@ -98,6 +98,8 @@ nav {
     width: 70%;
     border-radius: 0 0 10px 10px;
     padding: 3vh;
+    overflow: auto;
+    font-size: 12px;
 }
 
 .highlight {
@@ -106,7 +108,40 @@ nav {
 
 .input-line {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+}
+
+.input-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: green;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    width: 100%;
+    caret-color: transparent;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: green;
+    animation: blink 1s infinite;
+    position: absolute;
+    pointer-events: none;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 .about {
