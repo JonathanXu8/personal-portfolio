@@ -185,7 +185,7 @@ input:focus + .cursor {
 .about-right {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
   box-sizing: border-box;
@@ -299,4 +299,18 @@ input:focus + .cursor {
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
 }
