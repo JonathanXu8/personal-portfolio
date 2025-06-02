@@ -106,6 +106,10 @@ nav {
     color: yellow;
 }
 
+.success {
+    color: #51cf66;
+}
+
 .input-line {
     display: flex;
     align-items: center;
