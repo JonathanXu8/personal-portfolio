@@ -93,7 +93,7 @@ nav {
 
 .terminal {
     background-color: #EAE4D5;
-    color: green;
+    color: #75ab51;
     height: 75vh;
     width: 70%;
     border-radius: 0 0 10px 10px;
@@ -103,16 +103,26 @@ nav {
 }
 
 .highlight {
-    color: yellow;
+    color: #c9892e;
 }
 
 .success {
-    color: #51cf66;
+    color: green;
+}
+
+.input-prompt {
+    color: green;
 }
 
 .input-line {
     display: flex;
     align-items: center;
+}
+
+.output-line {
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .input-container {
@@ -138,9 +148,12 @@ nav {
     width: 8px;
     height: 16px;
     background: green;
-    animation: blink 1s infinite;
     position: absolute;
     pointer-events: none;
+}
+
+input:focus + .cursor {
+      animation: blink 1s infinite;
 }
 
 @keyframes blink {
