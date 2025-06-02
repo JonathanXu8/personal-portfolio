@@ -17,12 +17,12 @@ class Terminal {
         }
 
         this.init();
-        console.log("hello world");
     }
 
     init() {
         const input = document.getElementById('command-input');
         const cursor = document.getElementById('cursor');
+        const terminalBody = document.getElementById('terminal')
 
         input.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
@@ -44,15 +44,15 @@ class Terminal {
 
         input.focus()
 
-        document.addEventListener('click', () => {
-            input.focus()
+        terminalBody.addEventListener('click', () => {
+            input.focus();
         });
     }
 
     executeCommand(command) {
         const [cmd, ...args] = command.split(' ');
 
-        this.addOutput(`visitor@portfolio:${this.currentPath}$ ${command}`, 'command');
+        this.addOutput(`<span class="input-prompt">visitor@portfolio:${this.currentPath}$ ${command} </span>`, 'command');
 
         if (command === '') {
             this.addNewPrompt();
@@ -119,6 +119,10 @@ class Terminal {
         newInput.addEventListener('input', () => {
             this.updateCursorPosition(newInput, newCursor);
         });
+
+        terminalBody.addEventListener('click', () => {
+            newInput.focus();
+        });
         
         this.updateCursorPosition(newInput, newCursor);
         
@@ -147,99 +151,97 @@ class Terminal {
 
     showHelp() {
         const helpText = `
-            <span class="highlight">Available Commands:</span> <br>
-            <span class="success">about</span>      - Learn about me <br>
-            <span class="success">skills</span>     - View my technical skills <br>
-            <span class="success">projects</span>   - Browse my projects <br>
-            <span class="success">education</span>  - View my educational background <br>
-            <span class="success">contact</span>    - Get my contact information <br>
-            <span class="success">resume</span>     - Download my resume <br>
-            <span class="success">clear</span>      - Clear the terminal <br>
+<span class="highlight">Available Commands:</span>
+<span class="success">about</span>      - Learn about me
+<span class="success">skills</span>     - View my technical skills
+<span class="success">projects</span>   - Browse my projects
+<span class="success">education</span>  - View my educational background
+<span class="success">contact</span>    - Get my contact information
+<span class="success">clear</span>      - Clear the terminal
         `;
         this.addOutput(helpText);
     }
 
     showAbout() {
         const aboutText = `
-            <span class="highlight">About Me</span>
+<span class="highlight">About Me</span>
 
-            Hi! I'm a passionate software developer with expertise in modern web technologies.
-            I love creating innovative solutions and building applications that make a difference.<br>
-            <br>
-            <span class="success">Name:</span> Jonathan Xu <br>
-            <span class="success">Location:</span> Palo Alto, CA <br>
-            <br>
-            I'm constantly learning new technologies and staying up-to-date with industry trends.
-            When I'm not coding, you can find me contributing to open-source projects or
-            exploring the latest in AI and machine learning.
+Hi! I'm a passionate software developer with expertise in modern web technologies.
+I love creating innovative solutions and building applications that make a difference.
+
+<span class="success">Name:</span> Jonathan Xu
+<span class="success">Location:</span> Palo Alto, CA
+
+I'm constantly learning new technologies and staying up-to-date with industry trends.
+When I'm not coding, you can find me contributing to open-source projects or
+exploring the latest in AI and machine learning.
         `;
         this.addOutput(aboutText);
     }
 
     showSkills() {
         const skillsText = `
-            <span class="highlight">Technical Skills</span><br>
-            <br>
-            <span class="success">Languages:</span><br>
-            • Python, Java, C, OCaml<br>
-            • HTML, CSS<br>
-            • PostgreSQL<br>
-            <br>
-            <span class="success">Technologies:</span><br>
-            • Git, Github<br>
-            • Docker
-            `;
+<span class="highlight">Technical Skills</span>
+
+<span class="success">Languages:</span>
+• Python, Java, C, OCaml
+• HTML, CSS
+• PostgreSQL
+
+<span class="success">Technologies:</span>
+• Git, Github
+• Docker
+        `;
         this.addOutput(skillsText);
     }
 
     showProjects() {
         const projectsText = `
-            <span class="highlight">Featured Projects</span><br>
-            <span class="success">1. Custom Machine Learning Library</span><br>
-            Technologies: Python, Numpy, HTML, CSS, Flask<br>
-            Description: A machine learning library written from scratch in python<br>
-            GitHub: <span class="link">github.com</span><br>
-            <br>
-            <span class="success">2. Java Compiler</span><br>
-            Technologies: C<br>
-            Description: Selfmade Java compiler writtin in C<br>
-            Live Demo: <span class="link">github.com</span><br>
-            <br>
-            <span class="success">3. Keep It Up!</span><br>
-            Technologies: HTML, CSS, Javascript, React, Flask, MongoDB, MediaPipe<br>
-            Description: Interactive weather dashboard with forecasting<br>
-            GitHub: <span class="link">github.com</span><br>
-            <br>
+<span class="highlight">Featured Projects</span>
+
+<span class="success">1. Custom Machine Learning Library</span>
+Technologies: Python, Numpy, HTML, CSS, Flask
+Description: A machine learning library written from scratch in python
+GitHub: <span class="link">github.com</span>
+
+<span class="success">2. Java Compiler</span>
+Technologies: C
+Description: Selfmade Java compiler writtin in C
+Live Demo: <span class="link">github.com</span>
+
+<span class="success">3. Keep It Up!</span>
+Technologies: HTML, CSS, Javascript, React, Flask, MongoDB, MediaPipe
+Description: Interactive weather dashboard with forecasting
+GitHub: <span class="link">github.com</span>
          `;
         this.addOutput(projectsText);
     }
 
     showEducation() {
         const educationText = `
-            <span class="highlight">Education & Certifications</span><br>
+<span class="highlight">Education & Certifications</span>
 
-            <span class="success">Bachelor of Science in Computer Science</span><br>
-            University of Maryland, College Park | 2023 - 2027<br>
-            • Relevant Coursework: Data Structures, Algorithms, Database Systems<br>
-            • GPA: 4.0/4.0<br>
-            • Dean's List: Fall 2023, Spring 2024, Fall 2024, Spring 2025<br>
-            <br>
-            <span class="success">Certifications:</span><br>
-            • Docker Certification (2024)<br>
-            <br>
+<span class="success">Bachelor of Science in Computer Science</span>
+University of Maryland, College Park | 2023 - 2027
+• Relevant Coursework: Data Structures, Algorithms, Database Systems
+• GPA: 4.0/4.0
+• Dean's List: Fall 2023, Spring 2024, Fall 2024, Spring 2025
+
+<span class="success">Certifications:</span>
+• Docker Certification (2024)
         `;
         this.addOutput(educationText);
     }
 
     showContact() {
         const contactText = `
-            <span class="highlight">Contact Information</span><br>
+<span class="highlight">Contact Information</span>
 
-            <span class="success">Email:</span> jonathanxu.cs@email.com<br>
-            <span class="success">LinkedIn:</span> <span class="link">linkedin.com/in/jonathanxuu</span><br>
-            <span class="success">GitHub:</span> <span class="link">github.com/jonathanxu8</span><br>
-            <span class="success">Phone:</span> +1 (650) 709-5403<br>
-            <span class="success">Location:</span> Palo Alto, CA<br>
+<span class="success">Email:</span> jonathanxu.cs@email.com
+<span class="success">LinkedIn:</span> <span class="link">linkedin.com/in/jonathanxuu</span>
+<span class="success">GitHub:</span> <span class="link">github.com/jonathanxu8</span>
+<span class="success">Phone:</span> +1 (650) 709-5403
+<span class="success">Location:</span> Palo Alto, CA
         `;
         this.addOutput(contactText);
     }
@@ -247,7 +249,6 @@ class Terminal {
     clearTerminal() {
         const terminalBody = document.getElementById('terminal');
         terminalBody.innerHTML = '';
-        console.log("clear");
     }
 
 }
