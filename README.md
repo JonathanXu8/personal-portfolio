@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This site showcases my work, skills, a
 
 ## 🌐 Live Site
 
-[https://jonathanxu.io](https://jonathanxu.io)
+[https://jonathanxu8.github.io/personal_portfolio/](https://jonathanxu8.github.io/personal_portfolio/)
 
 ## 🛠️ Tech Stack
 
