@@ -166,13 +166,11 @@ input:focus + .cursor {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*padding-top: 50px;*/
 }
 
 .about-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /*margin-top: 20px;*/
     gap: 2rem;
 }
 
